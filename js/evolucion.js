@@ -13,15 +13,15 @@ $('#consultar').on('click', function() {
 		data: parametro,
 		success : function(data) {
 			console.log(data);
-      alert("Ara si que va");
+      alert("funciona");
 
 				var visualization = d3plus.viz()
 			    .container("#viz")
-			    .data(sample_data)
+			    .data(data)
 			    .type("line")
 			    .id("categoria")
-			    .y("tweets")
-			    .x("year")
+			    .y("total")
+			    .x("dia")
 			    .draw()
 
 		},
