@@ -9,19 +9,20 @@ $('#consultar').on('click', function() {
 
 	$.ajax({
 		type : "GET",
-		url : "http://localhost:8080/distribucion",
+		url : "http://localhost:8080/toppalabras",
 		data: parametro,
 		success : function(data) {
 			console.log(data);
-      alert("Ara si que va");
+      alert("Funciona");
 
       // instantiate d3plus
       var visualization = d3plus.viz()
         .container("#viz")  // container DIV to hold the visualization
         .data(data)  // data to use with the visualization
-        .type("tree_map")   // visualization type
-        .id("categoria")         // key for which our data is unique on
-        .size("numTweets")      // sizing of blocks
+        .type("bar")   // visualization type
+				.id("palabra")
+        .x("palabra")         // key for which our data is unique on
+        .y("menciones")      // sizing of blocks
         .draw()
 
 
@@ -29,7 +30,7 @@ $('#consultar').on('click', function() {
 		error : function(data) {
 
 			console.log(data);
-      alert("Esto no tira");
+      alert("Esto no funciona");
 
 		}
 	});
