@@ -14,7 +14,6 @@ path {
             fill: #5f89ad;
         }
 
-
 .axis path,
 .axis line {
   fill: none;
@@ -45,14 +44,15 @@ div.tooltip {
 
      <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
       <script type="text/javascript" src="js/jquery.min.js"></script>
-      <script type="text/javascript" src="js/tophashtags.js"></script>
-      <script type="text/javascript" src="js/toppalabras.js"></script>
-      <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
-      <script type="text/javascript" src="js/evolucion.js"></script>
-
       <script type="text/javascript" src="http://d3plus.org/js/d3.js"></script>
-      <!-- load D3plus after D3js -->
       <script type="text/javascript" src="http://d3plus.org/js/d3plus.js"></script>
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/d3.js" charset="utf-8"></script>
+      <link href="css/c3.css" rel="stylesheet" type="text/css">
+      <link href="css/c3.min.css" rel="stylesheet" type="text/css">
+      <script type="text/javascript" src="js/c3.min.js" charset="utf-8"></script>
+      <script type="text/javascript" src="js/evolucion.js" charset="utf-8"></script>
+
   </head>
   <body>
     <select id="anyo">
@@ -76,9 +76,6 @@ div.tooltip {
       <option value="12">Diciembre</option>
     </select>
     <button id="consultar">Consultar</button>
-    <div  align="center" id="viz"></div>
-    <div align="center" id="graphic1"></div>
-    <div align="center" id="graphic2"></div>
-    <div align="center" id="graphic3"></div>
+    <div id="chart"></div>
   </body>
 </html>
