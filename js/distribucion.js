@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 function distribucion(){
   var $anyo= $('#anyo');
@@ -28,6 +29,24 @@ function distribucion(){
 
  "Industria" "Empleo" 	"Seguridad" "Hacienda" "Salud" "Comercio" 	"Educación"  "Vivienda" "Ciencia y tecnología" "Medio ambiente" "Economía" "Transporte" "Demografía" "Deporte" "Energía" 	"Urbanismo e infraestructuras" "Sector público" "Legislación y justicia" "Cultura y ocio" "Sociedad y bienestar" "Medio Rural"
 */
+=======
+$(document).ready(function(){
+$('#consultar').on('click', function() {
+	var $anyo= $('#anyo');
+  var $mes= $('#mes');
+	var parametro = {
+		anyo: $anyo.val(),
+		mes: $mes.val()
+	};
+
+	$.ajax({
+		type : "GET",
+		url : "http://localhost:8080/distribucion",
+		data: parametro,
+		success : function(data) {
+			console.log(data);
+      alert("Ara si que va");
+>>>>>>> a0e9564db6fede9e9937a12127ae8c06215e3d64
 
       link = "http://localhost:8080/descarga?anyo=" + parametro.anyo + "&mes=" + parametro.mes
       // instantiate d3plus
@@ -74,6 +93,7 @@ function distribucion(){
   });
 }
 
+<<<<<<< HEAD
 
 
 $(document).ready(function(){
@@ -85,4 +105,9 @@ $(document).ready(function(){
   $('#mes').on('change', function() {
     distribucion()
   })
+=======
+		}
+	});
+});
+>>>>>>> a0e9564db6fede9e9937a12127ae8c06215e3d64
 })
