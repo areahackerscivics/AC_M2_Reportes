@@ -1,0 +1,81 @@
+
+body{
+  font-family: arial;
+}
+
+#container{
+  position: relative;
+  margin: 0 auto 0 auto;
+  width: 1000px;
+}
+
+#header{
+  position: relative;
+  width: 1000px;
+  height: 250px;
+}
+
+#logo_ahc{
+  position: relative;
+  float: left;
+  height: auto;
+  width: auto;
+  max-width: 345px;
+  max-height: 345px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#logo_go{
+  position: relative;
+  float: right;
+  height: auto;
+  width: auto;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+#selector{
+  position: relative;
+  margin: 0 auto 0 auto;
+  width: 410px;
+}
+
+.ancho_select{
+  width: 200px;
+}
+
+
+/*============================= INICIO CUERPO ================================*/
+#cuerpo{
+  position: relative;
+  width: 1000px;
+}
+
+#contenedor_distribucion{
+  position: relative;
+  float:left;
+  margin-top: 20px;
+}
+
+#grafico_distribucion{
+  position: relative;
+  width: 450px;
+  height: 470px;
+
+}
+
+#contenedor_portal_transparencia{
+  position: relative;
+  float: right;
+  margin-top: 20px;
+}
+
+
+#portal_transparencia{
+  position: relative;
+  width: 450px;
+  height: 450px;
+}
+
+/*============================= FIN CUERPO ===================================*/
