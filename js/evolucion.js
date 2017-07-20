@@ -1,49 +1,49 @@
-$(document).ready(function(){
-$('#consultar').on('click', function() {
-	var $anyo= $('#anyo');
-  var $mes= $('#mes');
-	var parametro = {
-		anyo: $anyo.val(),
-		mes: $mes.val()
-	};
 
-	$.ajax({
-		type : "GET",
-		url : "http://localhost:8080/evolucion",
-		data: parametro,
-		success : function(data) {
-			console.log(data);
-      alert("funciona");
+function evolucion(){
 
-			// Set the dimensions of the canvas / graph
-			var margin = {top: 30, right: 20, bottom: 70, left: 50},
-			    width = 500 - margin.left - margin.right,
-			    height = 500 - margin.top - margin.bottom;
+		var $anyo= $('#anyo');
+	  var $mes= $('#mes');
+		var parametro = {
+			anyo: $anyo.val(),
+			mes: $mes.val()
+		};
 
-			// Parse the date / time
-			//var parseDate = d3.timeFormat("%a %d");
+		$.ajax({
+				type : "GET",
+				url : "http://localhost:8080/evolucion",
+				data: parametro,
+				success : function(data) {
+					console.log(data);
 
-			// Set the ranges
-			var x =d3.scale.linear().range([0, width]);
-			var y = d3.scale.linear().range([height, 0]);
+					// Set the dimensions of the canvas / graph
+					var margin = {top: 30, right: 20, bottom: 70, left: 50},
+					    width = 500 - margin.left - margin.right,
+					    height = 500 - margin.top - margin.bottom;
 
-			 var xAxis = d3.svg.axis().scale(x)
-					 .orient("bottom");
-			 var yAxis = d3.svg.axis().scale(y)
-		 .orient("left");
-			//
-			// // Define the line
-			 var priceline = d3.svg.line()
-			    .x(function(d) { return x(d.dia); })
-			    .y(function(d) { return y(d.total); });
+					// Parse the date / time
+					//var parseDate = d3.timeFormat("%a %d");
 
-			// Adds the svg canvas
-			var svg = d3.select("#graphic3").append("svg")
-			        .attr("width", width + margin.left + margin.right)
-			        .attr("height", height + margin.top + margin.bottom)
-			    .append("g")
-			        .attr("transform",
-			              "translate(" + margin.left + "," + margin.top + ")");
+					// Set the ranges
+					var x =d3.scale.linear().range([0, width]);
+					var y = d3.scale.linear().range([height, 0]);
+
+					var xAxis = d3.svg.axis().scale(x)
+							.orient("bottom");
+					var yAxis = d3.svg.axis().scale(y)
+				 			.orient("left");
+					//
+					// // Define the line
+					var priceline = d3.svg.line()
+					    .x(function(d) { return x(d.dia); })
+					    .y(function(d) { return y(d.total); });
+
+					// Adds the svg canvas
+					var svg = d3.select("#grafico_evolucion").append("svg")
+					        .attr("width", width + margin.left + margin.right)
+					        .attr("height", height + margin.top + margin.bottom)
+					    		.append("g")
+					        .attr("transform",
+					              "translate(" + margin.left + "," + margin.top + ")");
 
 			    // Scale the range of the data
 			    x.domain(d3.extent(data, function(d) { return d.dia; }));
@@ -89,26 +89,32 @@ $('#consultar').on('click', function() {
 			            .text(d.key);
 			    });
 
-			  // Add the X Axis
-			  svg.append("g")
-			      .attr("class", "axis")
-						.attr("transform", "translate(0," + height + ")")
-			      .call(xAxis);
+				  // Add the X Axis
+				  svg.append("g")
+				      .attr("class", "axis")
+							.attr("transform", "translate(0," + height + ")")
+				      .call(xAxis);
 
-			  // Add the Y Axis
-			  svg.append("g")
-			      .attr("class", "axis")
-			      .call(yAxis);
+				  // Add the Y Axis
+				  svg.append("g")
+				      .attr("class", "axis")
+				      .call(yAxis);
+				},
+				error : function(data) {
+					console.log(data);
+
+				}
+		});
+}
 
 
-						},
+$(document).ready(function(){
+  evolucion()
 
-		error : function(data) {
-
-			console.log(data);
-      alert("Esto no tira");
-
-		}
-	});
-});
-	})
+  $('#anyo').on('change', function() {
+    evolucion()
+  })
+  $('#mes').on('change', function() {
+    evolucion()
+  })
+})

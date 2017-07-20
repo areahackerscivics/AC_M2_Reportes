@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 function distribucion(){
   var $anyo= $('#anyo');
@@ -19,34 +18,16 @@ function distribucion(){
       elMes = $("#mes option:selected").text();
       titulo = "Temas mencionados en Twitter en " + elMes
 
-      /*
-      var attributes = [
-         {"name": "Cultura y ocio", "hex": "#8F1B00"},
-         {"name": "sector público", "hex": "#C79660"},
+            /*
+            var attributes = [
+               {"name": "Cultura y ocio", "hex": "#8F1B00"},
+               {"name": "sector pï¿½blico", "hex": "#C79660"},
 
-         {"name": "Turismo", "hex": }
-       ]
+               {"name": "Turismo", "hex": }
+             ]
 
- "Industria" "Empleo" 	"Seguridad" "Hacienda" "Salud" "Comercio" 	"Educación"  "Vivienda" "Ciencia y tecnología" "Medio ambiente" "Economía" "Transporte" "Demografía" "Deporte" "Energía" 	"Urbanismo e infraestructuras" "Sector público" "Legislación y justicia" "Cultura y ocio" "Sociedad y bienestar" "Medio Rural"
-*/
-=======
-$(document).ready(function(){
-$('#consultar').on('click', function() {
-	var $anyo= $('#anyo');
-  var $mes= $('#mes');
-	var parametro = {
-		anyo: $anyo.val(),
-		mes: $mes.val()
-	};
-
-	$.ajax({
-		type : "GET",
-		url : "http://localhost:8080/distribucion",
-		data: parametro,
-		success : function(data) {
-			console.log(data);
-      alert("Ara si que va");
->>>>>>> a0e9564db6fede9e9937a12127ae8c06215e3d64
+       "Industria" "Empleo" 	"Seguridad" "Hacienda" "Salud" "Comercio" 	"Educaciï¿½n"  "Vivienda" "Ciencia y tecnologï¿½a" "Medio ambiente" "Economï¿½a" "Transporte" "Demografï¿½a" "Deporte" "Energï¿½a" 	"Urbanismo e infraestructuras" "Sector pï¿½blico" "Legislaciï¿½n y justicia" "Cultura y ocio" "Sociedad y bienestar" "Medio Rural"
+      */
 
       link = "http://localhost:8080/descarga?anyo=" + parametro.anyo + "&mes=" + parametro.mes
       // instantiate d3plus
@@ -71,18 +52,6 @@ $('#consultar').on('click', function() {
         })
         .draw()
 
-      /*
-      $( "#tabla_distribucion" ).empty();
-      var tabla = d3plus.viz()
-        .container("#tabla_distribucion")
-        .data(data)
-        .type("table")
-        .id("categoria")
-        .shape("square")
-        .cols(["numTweets", "porTweets"])
-        .draw()
-      */
-
 
     },
     error : function(data) {
@@ -93,7 +62,6 @@ $('#consultar').on('click', function() {
   });
 }
 
-<<<<<<< HEAD
 
 
 $(document).ready(function(){
@@ -105,9 +73,4 @@ $(document).ready(function(){
   $('#mes').on('change', function() {
     distribucion()
   })
-=======
-		}
-	});
-});
->>>>>>> a0e9564db6fede9e9937a12127ae8c06215e3d64
 })
