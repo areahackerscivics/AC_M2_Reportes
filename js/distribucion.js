@@ -18,16 +18,31 @@ function distribucion(){
       elMes = $("#mes option:selected").text();
       titulo = "Temas mencionados en Twitter en " + elMes
 
-            /*
-            var attributes = [
-               {"name": "Cultura y ocio", "hex": "#8F1B00"},
-               {"name": "sector p�blico", "hex": "#C79660"},
+      var attributes = [
+         {"categoria": "Turismo", "hex": "#BF1E2E"},
+         {"categoria": "Industria", "hex": "#EF4136"},
+         {"categoria": "Empleo", "hex": "#F25A29"},
+         {"categoria": "Seguridad", "hex": "#F8931F"},
+         {"categoria": "Hacienda", "hex": "#FCB042"},
+         {"categoria": "Salud", "hex": "#F9EE34"},
+         {"categoria": "Comercio", "hex": "#F9EE34"},
+         {"categoria": "Educación", "hex": "#D8DE24"},
+         {"categoria": "Vivienda", "hex": "#8DC641"},
+         {"categoria": "Ciencia y tecnología", "hex": "#272262"},
+         {"categoria": "Medio ambiente", "hex": "#2B3991"},
+         {"categoria": "Economía", "hex": "#29AAE3"},
+         {"categoria": "Transporte", "hex": "#01A79D"},
+         {"categoria": "Demografía", "hex": "#2BB673"},
+         {"categoria": "Deporte", "hex": "#016738"},
+         {"categoria": "Energía", "hex": "#009345"},
+         {"categoria": "Urbanismo e infraestructuras", "hex": "#3AB54B"},
+         {"categoria": "Sector público", "hex": "#672D93"},
+         {"categoria": "Legislación y justicia", "hex": "#92278F"},
+         {"categoria": "Cultura y ocio", "hex": "#9E1F64"},
+         {"categoria": "Sociedad y bienestar", "hex": "#DA1C5C"},
+         {"categoria": "Medio Rural", "hex": "#9B8578"}
+       ]
 
-               {"name": "Turismo", "hex": }
-             ]
-
-       "Industria" "Empleo" 	"Seguridad" "Hacienda" "Salud" "Comercio" 	"Educaci�n"  "Vivienda" "Ciencia y tecnolog�a" "Medio ambiente" "Econom�a" "Transporte" "Demograf�a" "Deporte" "Energ�a" 	"Urbanismo e infraestructuras" "Sector p�blico" "Legislaci�n y justicia" "Cultura y ocio" "Sociedad y bienestar" "Medio Rural"
-      */
 
       link = "http://localhost:8080/descarga?anyo=" + parametro.anyo + "&mes=" + parametro.mes
       // instantiate d3plus
@@ -39,8 +54,8 @@ function distribucion(){
         .id("categoria")         // key for which our data is unique on
         .size("numTweets")      // sizing of blocks
         .format("es_ES")
-        //.attrs(attributes)
-        //.color("hex")
+        .attrs(attributes)
+        .color("hex")
         .title(titulo)
         .title({
           "font": {"weight": "bold"},

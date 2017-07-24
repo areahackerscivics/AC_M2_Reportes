@@ -6,7 +6,7 @@ function evolucion(){
 		mes= $mes.val();
 
 var chart = c3.generate({
-	bindto: '#chart',
+	bindto: '#grafico_evolucion',
 	size: {height: 500},
 	padding: {
 			top: 40,
