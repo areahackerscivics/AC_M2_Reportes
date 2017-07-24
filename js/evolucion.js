@@ -4,20 +4,26 @@ function evolucion(){
 	var $mes= $('#mes');
 		anyo= $anyo.val();
 		mes= $mes.val();
+		elMes = $("#mes option:selected").text();
+		titulo:'Evolución de Tweets durante el mes de '+elMes;
 
 var chart = c3.generate({
 	bindto: '#grafico_evolucion',
-	size: {height: 500},
+	size: {height: 500,
+	width:1100},
 	padding: {
-			top: 40,
-			right:250,
+			top: 10,
+			right:200,
 			bottom: 40,
-			left: 250,
+			left: 20,
 	},
 	data: {
 		url : 'http://localhost:8080/evolucion?anyo='+anyo+'&mes='+mes,
 		mimeType: 'json'
 	},
+	title: {
+  text:'Evolución de Tweets durante el mes de '+elMes
+},
 
 	point: {r: 2},
 	legend: {
@@ -36,20 +42,13 @@ var chart = c3.generate({
 			}
 		},
 		tooltip: {
-			position: function (data, width, height, element) {
-				return {top: 50, left: 0};
-			},
 			format: {
 				title: function (x) { return 'Dia ' + (x+1); },
 				value: function (value, ratio, id) {
 					var format = id === 'data1' ? d3.format(',') : d3.format('');
 					return format(value);}}
 		}
-
 });
-
-
-
 }
 
 
