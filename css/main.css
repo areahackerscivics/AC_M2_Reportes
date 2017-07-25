@@ -90,7 +90,7 @@ body{
 
 #grafico_evolucion{
   position: relative;
-
+  font-size: 50px;
 }
 
 /*============================= FIN CUERPO ===================================*/
