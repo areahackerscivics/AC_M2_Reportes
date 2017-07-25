@@ -1,6 +1,6 @@
 
 body{
-  font-family: arial;
+  font-family: Sans-Serif, arial;
 }
 
 #container{
@@ -50,7 +50,7 @@ body{
 #cuerpo{
   position: relative;
   width: 1000px;
-  height: 1100px;
+  height: 1200px;
 }
 
 #contenedor_distribucion{
@@ -61,7 +61,7 @@ body{
 
 #grafico_distribucion{
   position: relative;
-  width: 450px;
+  width: 460px;
   height: 520px;
 
 }
@@ -75,8 +75,8 @@ body{
 
 #portal_transparencia{
   position: relative;
-  width: 450px;
-  height: 500px;
+  width: 460px;
+  height: 507px;
 }
 
 
@@ -85,7 +85,7 @@ body{
   float: left;
   width: 1000px;
   /*height: 500px;*/
-  /*margin-top: 20px;*/
+  margin-top: 75px;
 }
 
 #grafico_evolucion{

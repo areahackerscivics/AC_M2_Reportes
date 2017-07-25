@@ -57,6 +57,10 @@ function catalogo(){
         .format("es_ES")
         .attrs(attributes)
         .color("hex")
+        .font({
+          "family": "sans-serif",
+          "size": 15
+        })
         .title(titulo)
         .title({
           "font": {"weight": "bold"},

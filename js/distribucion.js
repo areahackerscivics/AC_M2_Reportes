@@ -56,14 +56,19 @@ function distribucion(){
         .format("es_ES")
         .attrs(attributes)
         .color("hex")
+        .font({
+          "family": "sans-serif",
+          "size": 15
+        })
         .title(titulo)
         .title({
           "font": {"weight": "bold"},
           "total": true
         })
         .footer({
+          "font": {"weight": "bold"},
           "link": link,
-          "value": "Descargar en formato CSV"
+          "value": "Descargar JSON"
         })
         .draw()
 
