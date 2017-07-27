@@ -1,3 +1,10 @@
+var servidor  = "http://localhost"
+var puerto    = "8080"
+var direccion = servidor + ":" + puerto + "/"
+
+
+
+
 function evolucion(){
 
 	var $anyo= $('#anyo');
@@ -20,7 +27,7 @@ function evolucion(){
 				left: 20,
 		},
 		data: {
-				url : 'http://localhost:8080/evolucion?anyo='+anyo+'&mes='+mes,
+				url : direccion + 'evolucion?anyo='+anyo+'&mes='+mes,
 				mimeType: 'json'
 		},
 		title: {

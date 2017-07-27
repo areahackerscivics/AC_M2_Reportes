@@ -1,4 +1,9 @@
 
+var servidor  = "http://localhost"
+var puerto    = "8080"
+var direccion = servidor + ":" + puerto + "/"
+
+
 function distribucion(){
   var $anyo= $('#anyo');
   var $mes= $('#mes');
@@ -8,7 +13,7 @@ function distribucion(){
   };
 
   $.ajax({
-    url : "http://localhost:8080/distribucion",
+    url : direccion + "distribucion",
     type : "GET",
     data: parametro,
     success : function(data) {
@@ -44,7 +49,7 @@ function distribucion(){
        ]
 
 
-      link = "http://localhost:8080/descarga?anyo=" + parametro.anyo + "&mes=" + parametro.mes
+      link = direccion + "descarga?anyo=" + parametro.anyo + "&mes=" + parametro.mes
       // instantiate d3plus
       $( "#grafico_distribucion" ).empty();
       var grafico = d3plus.viz()
