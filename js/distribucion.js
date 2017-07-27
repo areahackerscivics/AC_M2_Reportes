@@ -1,8 +1,9 @@
 
 var servidor  = "http://localhost"
 var puerto    = "8080"
-var direccion = servidor + ":" + puerto + "/"
 
+
+var direccion = servidor + ":" + puerto + "/"
 
 function distribucion(){
   var $anyo= $('#anyo');
