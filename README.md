@@ -3,7 +3,8 @@
 
 ## Descripción
 
-Este repositorio contiene una web para la visualización de la información obtenida con el proyecto<a href="https://github.com/areahackerscivics/GeneradorInformesTwitter" target="_blank">GeneradorInformesTwitter</a>.
+Este repositorio contiene una web para la visualización de la información obtenida con el proyecto [**Análisis de contenido de comunicación ciudadana**](https://github.com/areahackerscivics/Analisis_de_contenido_de_comunicacion_ciudadana_Tweets).
+
 
 
 ## Guía de uso
