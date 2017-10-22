@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+    <meta name="author" content="GeeksLabs">
+    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+     <title>.:::Análisis de Contenido:::.</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+      <link rel="stylesheet" type="text/css" href="css/c3.css">
+      <link rel="stylesheet" type="text/css" href="css/c3.min.css">
+
+    <!-- Bootstrap CSS -->    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--external css-->
+    <!-- font icon -->
+    <link href="css/elegant-icons-style.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Custom styles -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+      <script src="js/lte-ie7.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+  <!-- container section start -->
+  <section id="container" class="">
+      <!--header start-->
+      <header class="header dark-bg">
+            <div class="toggle-nav">
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+            </div>
+
+            <!--logo start-->
+            <a href="index.html" class="logo"></a>
+            <!--logo end-->
+
+            <div class="nav search-row" id="top_menu">
+              <!--  search form start -->
+              <!--  search form end -->
+            </div>
+ <div class="top-nav notification-row"><!-- notificatoin dropdown start-->
+                <ul class="nav pull-right top-menu">
+                    <!-- Metodolog�a  start -->
+                    <li id="task_notificatoin_bar" class="dropdown">
+                        <a  href="Metodologia.html">
+                            <i class="icon_document_alt"></i>
+                            <span class="username">Metodología</span>
+                        </a>
+                    </li>
+                    <!-- Metodolog�a end -->
+                    <!-- Visualizaci�n start-->
+                    <li id="mail_notificatoin_bar" class="dropdown">
+                        <a  href="Visualizacion11.html">
+                            <i class="icon_desktop_sel"></i>
+                            <span class="username">Visualización</span>
+                        </a>
+                    </li>
+                    <!-- Visualizaci�n end -->
+                    <!-- Equipo start-->
+                    <li id="alert_notificatoin_bar" class="dropdown">
+                        <a  href="Equipo.html">
+                            <i class="icon_contacts_alt"></i>
+                             <span class="username">Equipo</span>
+                        </a>
+                    </li>
+                    <!-- Equipo end-->
+                </ul>
+                <!-- notificatoin dropdown end-->
+            </div>
+      </header>      
+      <!--header end-->
+
+      
+       <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu">
+                  <li>
+	  		    <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon_lifesaver"></i>
+                          <span>Comparativa</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="Visualizacion11.html">
+                          <i class="icon_areachart"></i>
+                          <span>Treemap</span></a></li>                          
+                          <li><a class="" href="Visualizacion12.html">
+						  <i class="icon_barchart"></i>
+						  <span>Barras</span></a></li>
+					  </ul>
+                  </li> </li>
+				                    <li class="">
+                      <a class="" href="Visualizacion21.html">
+                          <i class="icon_linechart"></i>
+                          <span>Evolución</span>
+                      </a>
+                  </li>
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper">
+		  <div class="row">
+				<div class="col-lg-12">
+					<div class="page-header">
+					<div class="col-sm-4">
+						<i class="icon_desktop">
+							</i> Visualización 
+					</div>						
+						<div class="col-sm-4">
+						Mes
+						<select name="select" class="ancho_select" id="mes">
+	                    <option value="03" selected>Marzo</option>
+	                    <option value="04">Abril</option>
+	                    <option value="05">Mayo</option>
+	                    <option value="06">Junio</option>
+	                    <option value="07">Julio</option>
+	                  		</select> 
+						Año
+						<select name="select2" id="anyo" >
+						  <option value="2017" selected>2017</option>
+						  </select> 
+					</div>
+					</div>			
+				</div>
+			</div>
+			
+				<div class="row">
+				<div class="col-lg-12">
+					<ol class="breadcrumb">
+						<li><i class="icon_desktop"></i><a href="Visualizacion11.html">Visualización</a></li>
+						<li>Comparativa</li>
+						<li>Barras</li>
+					</ol>
+				</div>
+			</div>
+              <!-- page start-->
+              <div class="row" style="text-align:center"  align="center">
+                  <div class="col-lg-12"  align="center">
+                      <section class="panel">
+                          <header class="panel-heading">Comparativa</header>
+						  <div id="grafico_comparacion"><!-- Plotly chart will be drawn inside this DIV --></div>
+
+<div id="hook" style="text-align:center" align="center" ></div>
+						  
+						  
+						   <!-- Aquí va la gráfica 2.1-->
+                      </section>
+                  </div>
+              </div>
+              <!-- page end-->
+			  
+          </section>
+      </section>
+      <!--main content end-->
+  </section>
+  <!-- container section end -->
+    <!-- javascripts -->
+<div id="grafico_comparacion"><!-- Plotly chart will be drawn inside this DIV --></div>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/d3.js" charset="utf-8"></script>
+      <script type="text/javascript" src="js/d3plus.js"></script>
+      <script type="text/javascript" src="js/c3.min.js" charset="utf-8"></script>
+
+      <!-- Ficheros JS para realizar las peticiones a la API -->
+    <script src="js/jquery.js"></script>
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script type="text/javascript" src="js/comparacion.js" charset="utf-8"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- nicescroll -->
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/legendas.js"charset="utf-8"></script> 
+    <!--custome script for all page-->
+    <script src="js/scripts.js"></script>
+
+
+  </body>
+</html>

@@ -1,4 +1,30 @@
+article.why-info-grows {
+ background: #3b9343 url('/static/img/publications/books/information-bg.png') repeat 50% 0% fixed; 
+ }
+article.why-info-grows section {
+background-color: #fff; 
+}
+article.why-info-grows section content div:first-child {
+display: block;
+width: 100%; 
+}
 
+article.why-info-grows section content div:first-child h3,
+article.why-info-grows section content div:first-child h4 {
+display: inline-block; 
+}
+article.why-info-grows section content div:first-child h3 {
+ margin-right: 8px ; 
+ }
+article.why-info-grows section content div:first-child h4 {
+margin-top: 10px;
+margin-bottom: 20px; 
+}
+ @media all and (max-width: 768px) {
+article.why-info-grows section content div:first-child h4 {
+margin-top: 5px;
+margin-bottom: 10px;   }
+}
 body{
   font-family: Sans-Serif, arial;
 }
@@ -62,9 +88,39 @@ body{
 #grafico_distribucion{
   position: relative;
   width: 460px;
-  height: 520px;
-
+  height: 507px;
 }
+#graficoP{
+  position: relative;
+  width: 560px;
+  height: 407px;
+  font-size: 50px;
+}
+
+#legend{
+  position: relative;
+  width: 1000px;
+  height: 50px;
+  font-size: 50px;
+}
+
+#rect{
+  position: relative;
+  width: 1000px;
+  height: 50px;
+  font-size: 50px;
+}
+
+#hook{
+  position: relative;
+  width: 1000px;
+  height: 50px;
+  font-size: 50px;
+  font-family:"Times New Roman", Times, serif
+  
+}
+
+
 
 #contenedor_portal_transparencia{
   position: relative;
@@ -75,8 +131,9 @@ body{
 
 #portal_transparencia{
   position: relative;
-  width: 460px;
-  height: 507px;
+  width: 560px;
+  height: 407px;
+  font-size: 50px;
 }
 
 
@@ -89,8 +146,49 @@ body{
 }
 
 #grafico_evolucion{
-  position: relative;
-  font-size: 50px;
+ width:100%
+
 }
 
 /*============================= FIN CUERPO ===================================*/
+.mytooltip {
+  position:absolute;
+  text-align: left;
+  width: 200px;
+  height:auto;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+  color: #787777;
+  padding: 1px 5px;
+  z-index:1;
+}
+
+.mytooltip:after { /*=el piquito*/
+  box-sizing: border-box;
+  display: inline;
+  width: 100%;
+  line-height: 1;
+  color: #FFFFFF;
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+  margin: -3px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.mytooltip span {
+    display: block;
+    text-align: left;
+    width: 0px;
+    height: auto;
+  }
+
+#thumbnail {
+    width: 200px;
+    height: auto;
+    margin: 5 auto;
+    color: #000000;
+    text-align: left;
+
+  }
